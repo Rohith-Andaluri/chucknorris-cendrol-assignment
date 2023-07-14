@@ -1,38 +1,166 @@
-.App {
-  text-align: center;
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.main-container  {
+  background-image: linear-gradient(to right, #3b82f6, #404142);
   min-height: 100vh;
+  background-size: cover;
+  padding-top: 20px;  
+}
+.heading {
+  text-align: center;
+  font-family: "Roboto";
+  color: #03fc3d;
+  font-size: 40px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-weight: 700;
+  animation: bounce 1s infinite;
+}
+.buttons-container {
+  list-style-type: none;
+  padding-left: 0px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding: 20px;
+  position: relative;
+}
+.jokes-container {
+  background-image: linear-gradient(90deg,#2c5364,#203a43,#0f2027);
+  padding: 25px;
+}
+.head-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  margin-bottom: 20px;
+}
+.joke-heading {
+  font-family: "Roboto";
+  color: #ffffff;
+  font-size: 35px;
+  margin-top: 0px;
+  font-weight: 700;
+  text-transform: capitalize;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0px;
+}
+.cross-button {
+  align-self: flex-start;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer ;
+}
+.cross {
+  font-size: 25px;
+  color: #ffffff;
+}
+.loader-container {
+  display: flex; 
+  flex-direction: colomn; 
+  justify-content: center; 
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+@media (min-width:768px) and (max-width:1023px){
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .buttons-container {
+    width: 75%;
+    background-attachment: fixed;
+    justify-content: center;
+    margin-left: 30px;
+  }
+  .heading {
+    font-size: 45px;
+  }
+  .jokes-container {
+    position: absolute;
+    top: 30vh;
+    z-index: 1;
+    width: 450px;
+    min-height: 300px;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width:1024px) and (max-width: 1279px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+  .buttons-container {
+    background-attachment: fixed;
+    justify-content: center;
+    margin-left: 30px;
+  }
+  .heading {
+    font-size: 50px;
+  }
+  .jokes-container {
+    position: absolute;
+    top: 30vh;
+    z-index: 1;
+    width: 600px;
+    height: 400px;
   }
 }
+
+@media screen and (min-width: 1280px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .buttons-container {  
+    background-attachment: fixed;
+    justify-content: center;
+    margin-left: 30px;
+  }
+  .heading {
+    font-size: 45px;
+  }
+  .jokes-container {
+    position: absolute;
+    top: 30vh;
+    z-index: 1;
+    width: 450px;
+    min-height: 300px;
+  }
+}
+
+@keyframes bounce { 
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-30px); }
+}
+ 
+.bounce {
+  animation: bounce 0.8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+
+
+
+
